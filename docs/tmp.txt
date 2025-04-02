@@ -1,0 +1,316 @@
+Ти си ученик от 12 клас специалност "Приложно програмиране".
+Пишеш дипломен проект по задание от прикачения файл.
+Направи ми план на дипломния проект и разбивка по брой страници за всяка точка според изискванията на заданието
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+2. Съдържание (1 стр.)
+Структура на документа с номерирани раздели.
+
+3. Увод (Въведение) (2 стр.)
+Кратко описание на темата.
+
+Основни цели на разработката.
+
+Очаквани резултати.
+///////////////////////////////////////////////////////////////////////////////
+
+4. Основна част (22 стр.)
+4.1. Теоретична част (10 стр.)
+Работа с файлове в уеб приложения (2 стр.) --------------------------DONE
+
+Видове файлове, обработвани в уеб приложения.       2 СТР.
+
+Предизвикателства при работа с файлове.
+////////////////////////////////////////////////////////////
+Качване на файлове (3 стр.)
+
+Методи за качване на файлове (HTML5, JavaScript, AJAX).-------------- DONE
+
+Серверни технологии за обработка (PHP, Node.js, Python).  2 СТР
+
+Сваляне на файлове (2 стр.) - done
+
+Генериране и предоставяне на файлове за изтегляне.
+
+Механизми за контрол на достъпа.------------------------------------DONE
+
+Обработка на файлове от страна на клиента (3 стр.) -----------------DONE
+
+-Четене и манипулиране на файлове с JavaScript.
+
+-Валидация и сигурност.
+
+4.2. Практическа част (12 стр.)
+Описание на разработеното уеб приложение (2 стр.)
+
+Основни функционалности.
+
+Архитектура на приложението.
+
+Избор на технологии (2 стр.)
+
+Програмен език и фреймворк (например, JavaScript с Node.js).
+
+База данни и файлово хранилище.
+
+Реализация на качване на файлове (3 стр.)
+
+Фронтенд (HTML, JavaScript).
+
+Бекенд обработка (Node.js, PHP).
+
+Съхранение и организиране на файловете (2 стр.)
+
+Структура на базата данни.
+
+Методи за сигурно съхранение.
+
+Преглед и обработка на файлове (2 стр.)
+
+Потребителски интерфейс за преглед.
+
+Допълнителни възможности (категоризация, търсене).
+
+Тестване и отстраняване на грешки (1 стр.)
+
+Методи за тестване.
+
+Анализ на резултатите.
+
+5. Заключение (2 стр.)
+Обобщение на разработката.
+
+Възможности за разширяване на проекта.
+
+6. Списък на използваната литература (1 стр.)
+Цитирани източници.
+
+7. Приложения (1 стр.)
+Примерен код, диаграми и допълнителна документация.
+/////////////////////////////////////////////////////////////
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button type="submit">Качи файл</button>
+</form>
+//////////////////////////////////////////////////////////////////////////
+
+const formData = new FormData();
+formData.append("file", fileInput.files[0]);
+
+fetch("upload.php", {
+    method: "POST",
+    body: formData
+}).then(response => response.json())
+  .then(data => console.log("Файлът е качен успешно!", data))
+  .catch(error => console.error("Грешка при качване", error));
+  ///////////////////////////////////////////////////////////////////
+
+  if ($_FILES["file"]["error"] == UPLOAD_ERR_OK) {
+    $uploadDir = "uploads/";
+    $uploadFile = $uploadDir . basename($_FILES["file"]["name"]);
+    move_uploaded_file($_FILES["file"]["tmp_name"], $uploadFile);
+    echo "Файлът е качен успешно!";
+}
+//////////////////////////////////////////////////////////////////////
+
+const multer = require("multer");
+const upload = multer({ dest: "uploads/" });
+
+app.post("/upload", upload.single("file"), (req, res) => {
+    res.send("Файлът е качен успешно!");
+});
+///////////////////////////////////////////////////////////////////
+
+from flask import Flask, request
+app = Flask(__name__)
+
+@app.route("/upload", methods=["POST"])
+def upload_file():
+    file = request.files["file"]
+    file.save("uploads/" + file.filename)
+    return "Файлът е качен успешно!"
+
+//////////////////////////////////////////////////////////////
+
+header('Content-Type: application/octet-stream');
+header('Content-Disposition: attachment; filename="example.pdf"');
+readfile('files/example.pdf');
+
+//////////////////////////////////////////////////////////
+
+const downloadFile = (url) => {
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = '';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+};
+
+downloadFile('files/example.pdf');
+
+//////////////////////////////////////////////////////////////////////
+
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    die('Неоторизиран достъп');
+}
+header('Content-Type: application/pdf');
+readfile('files/secure_document.pdf');
+
+///////////////////////////////////////////////////
+
+app.get('/download', (req, res) => {
+    if (!req.isAuthenticated()) {
+        return res.status(403).send('Неоторизиран достъп');
+    }
+    res.download('files/secure_document.pdf');
+});
+
+/////////////////////////////////////////////////////////
+
+header('Content-Type: text/csv');
+header('Content-Disposition: attachment; filename="report.csv"');
+$output = fopen('php://output', 'w');
+fputcsv($output, ['ID', 'Име', 'Имейл']);
+fputcsv($output, [1, 'Иван Иванов', 'ivan@example.com']);
+fclose($output);
+
+/////////////////////////////////////////
+
+$zip = new ZipArchive();
+$zipName = "files.zip";
+if ($zip->open($zipName, ZipArchive::CREATE) === TRUE) {
+    $zip->addFile("document.pdf");
+    $zip->addFile("image.jpg");
+    $zip->close();
+    header('Content-Type: application/zip');
+    header('Content-Disposition: attachment; filename="'.$zipName.'"');
+    readfile($zipName);
+}
+
+//////////////////////////////////////////////////
+
+const fileInput = document.getElementById('fileInput');
+fileInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            console.log('Съдържание на файла:', e.target.result);
+        };
+        reader.readAsText(file);
+    }
+});
+
+////////////////////////////////////////////////
+
+const fileInput = document.getElementById('imageInput');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+fileInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const img = new Image();
+        img.onload = function() {
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
+        img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+});
+
+///////////////////////////////////////
+
+const fileInput = document.getElementById('secureFileInput');
+fileInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    const allowedTypes = ['image/png', 'image/jpeg', 'application/pdf'];
+    const maxSize = 2 * 1024 * 1024; // 2MB
+
+    if (!allowedTypes.includes(file.type)) {
+        alert('Невалиден тип файл!');
+        return;
+    }
+    if (file.size > maxSize) {
+        alert('Файлът е твърде голям!');
+        return;
+    }
+    alert('Файлът е валиден!');
+});
+
+////////////////////////////////////////
+
+<input type="file" accept=".jpg, .png, .pdf">
+
+///////////////////////////////////////////////
+
+const fileInput = document.getElementById('fileInput');
+
+fileInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        const content = e.target.result;
+        document.getElementById('output').innerText = content; // Избягване на XSS
+    };
+
+    reader.readAsText(fi
+
+    ////////////////
+
+    const dropZone = document.getElementById('dropZone');
+
+dropZone.addEventListener('dragover', (event) => {
+    event.preventDefault();
+    dropZone.style.backgroundColor = '#eee';
+});
+
+dropZone.addEventListener('dragleave', () => {
+    dropZone.style.backgroundColor = 'white';
+});
+
+dropZone.addEventListener('drop', (event) => {
+    event.preventDefault();
+    dropZone.style.backgroundColor = 'white';
+
+    const files = event.dataTransfer.files;
+    for (const file of files) {
+        console.log(`Качен файл: ${file.name}, размер: ${file.size} байта`);
+    }
+});
+ ////////////////////
+
+///////////
+
+const fileInput = document.getElementById('fileInput');
+
+fileInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+
+  reader.onload = (event) => {
+    const fileContent = event.target.result;
+    console.log(fileContent); // Извеждане на съдържанието на файла в конзолата
+  };
+
+  reader.readAsText(file);
+});
+
+///////////////
+
+//////////////////
+const fileContent = 'Това е съдържанието на новия файл.';
+const blob = new Blob([fileContent], { type: 'text/plain' });
+const url = URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'newfile.txt';
+link.click();
+//////////////////
+
+

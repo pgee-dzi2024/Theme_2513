@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Време на генериране: 31 яну 2025 в 09:36
+-- Време на генериране: 19 апр 2025 в 20:45
 -- Версия на сървъра: 10.4.32-MariaDB
 -- Версия на PHP: 8.2.12
 
@@ -27,7 +27,6 @@ SET time_zone = "+00:00";
 -- Структура на таблица `auth_group`
 --
 
-DROP TABLE IF EXISTS `auth_group`;
 CREATE TABLE `auth_group` (
   `id` int(11) NOT NULL,
   `name` varchar(150) NOT NULL
@@ -39,7 +38,6 @@ CREATE TABLE `auth_group` (
 -- Структура на таблица `auth_group_permissions`
 --
 
-DROP TABLE IF EXISTS `auth_group_permissions`;
 CREATE TABLE `auth_group_permissions` (
   `id` bigint(20) NOT NULL,
   `group_id` int(11) NOT NULL,
@@ -52,7 +50,6 @@ CREATE TABLE `auth_group_permissions` (
 -- Структура на таблица `auth_permission`
 --
 
-DROP TABLE IF EXISTS `auth_permission`;
 CREATE TABLE `auth_permission` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -88,7 +85,11 @@ INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALU
 (21, 'Can add session', 6, 'add_session'),
 (22, 'Can change session', 6, 'change_session'),
 (23, 'Can delete session', 6, 'delete_session'),
-(24, 'Can view session', 6, 'view_session');
+(24, 'Can view session', 6, 'view_session'),
+(25, 'Can add recipe', 7, 'add_recipe'),
+(26, 'Can change recipe', 7, 'change_recipe'),
+(27, 'Can delete recipe', 7, 'delete_recipe'),
+(28, 'Can view recipe', 7, 'view_recipe');
 
 -- --------------------------------------------------------
 
@@ -96,7 +97,6 @@ INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALU
 -- Структура на таблица `auth_user`
 --
 
-DROP TABLE IF EXISTS `auth_user`;
 CREATE TABLE `auth_user` (
   `id` int(11) NOT NULL,
   `password` varchar(128) NOT NULL,
@@ -111,13 +111,19 @@ CREATE TABLE `auth_user` (
   `date_joined` datetime(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Схема на данните от таблица `auth_user`
+--
+
+INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
+(1, 'pbkdf2_sha256$600000$xvd7pMyU8HHMg4moe8fdyR$T1xC/mQ9hz7ak26QLv8bJ6bcVlMe96SEACbImnfuEVo=', '2025-04-19 17:09:27.232445', 1, 'dzi_25', '', '', '', 1, 1, '2025-04-19 10:41:37.235725');
+
 -- --------------------------------------------------------
 
 --
 -- Структура на таблица `auth_user_groups`
 --
 
-DROP TABLE IF EXISTS `auth_user_groups`;
 CREATE TABLE `auth_user_groups` (
   `id` bigint(20) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -130,7 +136,6 @@ CREATE TABLE `auth_user_groups` (
 -- Структура на таблица `auth_user_user_permissions`
 --
 
-DROP TABLE IF EXISTS `auth_user_user_permissions`;
 CREATE TABLE `auth_user_user_permissions` (
   `id` bigint(20) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -143,7 +148,6 @@ CREATE TABLE `auth_user_user_permissions` (
 -- Структура на таблица `django_admin_log`
 --
 
-DROP TABLE IF EXISTS `django_admin_log`;
 CREATE TABLE `django_admin_log` (
   `id` int(11) NOT NULL,
   `action_time` datetime(6) NOT NULL,
@@ -161,7 +165,6 @@ CREATE TABLE `django_admin_log` (
 -- Структура на таблица `django_content_type`
 --
 
-DROP TABLE IF EXISTS `django_content_type`;
 CREATE TABLE `django_content_type` (
   `id` int(11) NOT NULL,
   `app_label` varchar(100) NOT NULL,
@@ -178,6 +181,7 @@ INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 (2, 'auth', 'permission'),
 (4, 'auth', 'user'),
 (5, 'contenttypes', 'contenttype'),
+(7, 'main', 'recipe'),
 (6, 'sessions', 'session');
 
 -- --------------------------------------------------------
@@ -186,7 +190,6 @@ INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 -- Структура на таблица `django_migrations`
 --
 
-DROP TABLE IF EXISTS `django_migrations`;
 CREATE TABLE `django_migrations` (
   `id` bigint(20) NOT NULL,
   `app` varchar(255) NOT NULL,
@@ -216,7 +219,8 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 (15, 'auth', '0010_alter_group_name_max_length', '2025-01-31 08:13:14.651325'),
 (16, 'auth', '0011_update_proxy_permissions', '2025-01-31 08:13:14.682580'),
 (17, 'auth', '0012_alter_user_first_name_max_length', '2025-01-31 08:13:14.698194'),
-(18, 'sessions', '0001_initial', '2025-01-31 08:13:14.776314');
+(18, 'sessions', '0001_initial', '2025-01-31 08:13:14.776314'),
+(19, 'main', '0001_initial', '2025-04-19 13:52:48.306975');
 
 -- --------------------------------------------------------
 
@@ -224,12 +228,43 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 -- Структура на таблица `django_session`
 --
 
-DROP TABLE IF EXISTS `django_session`;
 CREATE TABLE `django_session` (
   `session_key` varchar(40) NOT NULL,
   `session_data` longtext NOT NULL,
   `expire_date` datetime(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Схема на данните от таблица `django_session`
+--
+
+INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
+('act4kjwpujxm1tkjstp4xw8v3iah5v7i', '.eJxVjDsOwjAQBe_iGlneEOw1JT1nsPZj4wBKpDipEHeHSCmgfTPzXibRutS0tjynQc3ZgDn8bkzyyOMG9E7jbbIyjcs8sN0Uu9Nmr5Pm52V3_w4qtfqtxWEMHrQwgQoqeD7KyXmGEolil11PGgM6Jt-jdtIBYiBGBofSF_P-APLCOCo:1u6Bh1:PwED4uhPMVgrQ6qqDEtd8sDdE4TYOzolnwgLdz056C8', '2025-05-03 17:09:27.237442'),
+('z9qwfv8g1hthscxn2pqh1kn2l0w1n2s9', '.eJxVjDsOwjAQBe_iGlneEOw1JT1nsPZj4wBKpDipEHeHSCmgfTPzXibRutS0tjynQc3ZgDn8bkzyyOMG9E7jbbIyjcs8sN0Uu9Nmr5Pm52V3_w4qtfqtxWEMHrQwgQoqeD7KyXmGEolil11PGgM6Jt-jdtIBYiBGBofSF_P-APLCOCo:1u65e0:Yp505FLxKG9hhDNIk2NIy3f2LTkTQ4EICQ84NYR_SqM', '2025-05-03 10:41:56.751359');
+
+-- --------------------------------------------------------
+
+--
+-- Структура на таблица `main_recipe`
+--
+
+CREATE TABLE `main_recipe` (
+  `id` bigint(20) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `description` longtext NOT NULL,
+  `time` int(11) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `picture` varchar(100) NOT NULL,
+  `attachment` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Схема на данните от таблица `main_recipe`
+--
+
+INSERT INTO `main_recipe` (`id`, `title`, `description`, `time`, `category`, `picture`, `attachment`) VALUES
+(1, 'Постни печени сарми', 'Хубаво нещо са традициите! Придават идентичност на цял един народ. Затова е изключително важно да ги запазим и да ги предаваме на поколенията след нас.\r\nНа Бъдни вечер, традицията повелява на трапезата да има само постни ястия. Предлагаме рецепта за постни сарми.', 70, 'Основни', 'pictures/pecheni-postni-sarmi-za-Bydni-vecher.jpg', 'files/rec1.pdf'),
+(2, 'БИСКВИТЕНА ТОРТА', 'Бисквитена торта с ябълки, заквасена сметана, шоколад и други вкусотийки. Неустоима, съблазнителна и възхитително вкусна!', 20, 'Десерти', 'pictures/Biskvitena_torta-scaled.jpg', 'files/rec_2.docx');
 
 --
 -- Indexes for dumped tables
@@ -309,6 +344,12 @@ ALTER TABLE `django_session`
   ADD KEY `django_session_expire_date_a5c62663` (`expire_date`);
 
 --
+-- Индекси за таблица `main_recipe`
+--
+ALTER TABLE `main_recipe`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -328,13 +369,13 @@ ALTER TABLE `auth_group_permissions`
 -- AUTO_INCREMENT for table `auth_permission`
 --
 ALTER TABLE `auth_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `auth_user`
 --
 ALTER TABLE `auth_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `auth_user_groups`
@@ -358,13 +399,19 @@ ALTER TABLE `django_admin_log`
 -- AUTO_INCREMENT for table `django_content_type`
 --
 ALTER TABLE `django_content_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `django_migrations`
 --
 ALTER TABLE `django_migrations`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `main_recipe`
+--
+ALTER TABLE `main_recipe`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Ограничения за дъмпнати таблици

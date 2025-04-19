@@ -4,204 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13c14061-d379-49e6-b7ae-755d84b25eea" name="Changes" comment="редакция">
-      <change afterPath="$PROJECT_DIR$/dp/main/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/flaticon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/gijgo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/magnific-popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/nice-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/slick.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/slicknav.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/style.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/theme-default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/theme-default.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/css/themify-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/Flaticon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/Flaticon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/Flaticon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/Flaticon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/Flaticon.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/flaticon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/gijgo-material.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/gijgo-material.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/gijgo-material.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/gijgo-material.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/themify.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/themify.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/themify.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/fonts/themify.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/banner/accordion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/banner/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/banner/banner_testmonial.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/banner/bradcam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/banner/portfolio_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/banner/study_banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/blog/author.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/blog/blog_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/blog/blog_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/blog/blog_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/blog/blog_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/blog/learn_about_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/blog/single_blog_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/blog/single_blog_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/blog/single_blog_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/blog/single_blog_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/blog/single_blog_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/blog/slide_thumb_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/case_study/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/case_study/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/case_study/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/case_study/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/case_study/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/case_study/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/case_study/case_banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/comment/comment_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/comment/comment_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/comment/comment_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/a2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/disabled-check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/disabled-radio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/f1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/f2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/f3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/f4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/f5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/f6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/f7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/f8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/g1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/g2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/g3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/g4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/g5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/g6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/g7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/g8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/primary-check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/primary-radio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/success-check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/elements/success-radio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/footer_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/logo_g.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/offers/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/offers/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/offers/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/pattern/patrn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/pattern/patrn_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/portfolio/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/portfolio/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/portfolio/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/portfolio/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/portfolio/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/post/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/post/post_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/post/post_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/post/post_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/post/post_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/post/post_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/post/post_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/post/post_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/post/post_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/post/post_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/post/post_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/post/preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/recepie/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/recepie/recepie_details.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/recepie/recpie_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/recepie/recpie_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/recepie/recpie_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/recepie/recpie_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/recepie/recpie_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/recepie/recpie_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/svg_icon/feature_1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/svg_icon/feature_2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/svg_icon/feature_3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/svg_icon/feature_4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/svg_icon/feature_5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/svg_icon/feature_6.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/svg_icon/seo_1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/svg_icon/seo_2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/svg_icon/seo_3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/testmonial/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/testmonial/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/testmonial/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/testmonial/quote.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/testmonial/thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/video/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/video/big.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/video/big_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/video/sm2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/video/small_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/img/video/small_sm1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/ajax-form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/gijgo.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/imagesloaded.pkgd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/isotope.pkgd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/jquery.ajaxchimp.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/jquery.counterup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/jquery.form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/jquery.magnific-popup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/jquery.scrollUp.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/jquery.slicknav.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/mail-script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/nice-select.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/plugins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/scrollIt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/slick.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/vendor/jquery-1.12.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/vendor/modernizr-3.5.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/static/js/wow.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/templates/main/Recipes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/templates/main/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/templates/main/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/templates/main/recipes_details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/templates/main/recipes_new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/templates/main/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dp/main/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/work/temp.txt" afterDir="false" />
+    <list default="true" id="13c14061-d379-49e6-b7ae-755d84b25eea" name="Changes" comment="готово на ниво макет">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/dp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dp/dp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/main/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/main/templates/main/Recipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/templates/main/Recipes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/main/templates/main/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/templates/main/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/main/templates/main/recipes_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/templates/main/recipes_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/main/templates/main/recipes_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/templates/main/recipes_new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dp/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/HTML/tasty-recipes-master/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/work/HTML/tasty-recipes-master/elements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dr/~$ма_2513.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/work/~$rec_1.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745005032191</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="готово на ниво макет">
+      <option name="closed" value="true" />
+      <created>1745083185357</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1745083185357</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -342,6 +164,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="редакция" />
-    <option name="LAST_COMMIT_MESSAGE" value="редакция" />
+    <MESSAGE value="готово на ниво макет" />
+    <option name="LAST_COMMIT_MESSAGE" value="готово на ниво макет" />
   </component>
 </project>

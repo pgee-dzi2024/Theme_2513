@@ -20,105 +20,19 @@
     <div class="recepie_area plus_padding">
         <div class="container">
             <div class="row">
+                {% for rec in recipes %}
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="single_recepie text-center">
                         <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_1.png" alt="">
+                            <img src="{{ rec.picture.url }}" alt="">
                         </div>
-                        <h3>Egg Manchurian</h3>
-                        <span>Appetizer</span>
-                        <p>Time Needs: 30 Mins</p>
-                        <a href="{% url 'recipe_details' %}" class="line_btn">View Full Recipe</a>
+                        <h3>{{ rec.title }}</h3>
+                        <span>{{ rec.category }}</span>
+                        <p>Време за приготвяне: {{rec.time}} мин.</p>
+                        <a href="{% url 'recipe_details' rec.id %}" class="line_btn">Виж повече...</a>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_2.png" alt="">
-                        </div>
-                        <h3>Pure Vegetable Bowl</h3>
-                        <span>Appetizer</span>
-                        <p>Time Needs: 30 Mins</p>
-                        <a href="#" class="line_btn">View Full Recipe</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_3.png" alt="">
-                        </div>
-                        <h3>Egg Masala Ramen</h3>
-                        <span>Appetizer</span>
-                        <p>Time Needs: 30 Mins</p>
-                        <a href="#" class="line_btn">View Full Recipe</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_1.png" alt="">
-                        </div>
-                        <h3>Egg Manchurian</h3>
-                        <span>Appetizer</span>
-                        <p>Time Needs: 30 Mins</p>
-                        <a href="#" class="line_btn">View Full Recipe</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_2.png" alt="">
-                        </div>
-                        <h3>Pure Vegetable Bowl</h3>
-                        <span>Appetizer</span>
-                        <p>Time Needs: 30 Mins</p>
-                        <a href="#" class="line_btn">View Full Recipe</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_3.png" alt="">
-                        </div>
-                        <h3>Egg Masala Ramen</h3>
-                        <span>Appetizer</span>
-                        <p>Time Needs: 30 Mins</p>
-                        <a href="#" class="line_btn">View Full Recipe</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_1.png" alt="">
-                        </div>
-                        <h3>Egg Manchurian</h3>
-                        <span>Appetizer</span>
-                        <p>Time Needs: 30 Mins</p>
-                        <a href="#" class="line_btn">View Full Recipe</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_2.png" alt="">
-                        </div>
-                        <h3>Pure Vegetable Bowl</h3>
-                        <span>Appetizer</span>
-                        <p>Time Needs: 30 Mins</p>
-                        <a href="#" class="line_btn">View Full Recipe</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_3.png" alt="">
-                        </div>
-                        <h3>Egg Masala Ramen</h3>
-                        <span>Appetizer</span>
-                        <p>Time Needs: 30 Mins</p>
-                        <a href="#" class="line_btn">View Full Recipe</a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

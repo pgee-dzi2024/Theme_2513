@@ -8,7 +8,11 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
+                        {% if recipe %}
+                        <h3>{{ recipe.title }}</h3>
+                        {% else %}
                         <h3>Нова рецепта</h3>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -21,7 +25,9 @@
             <div class="row align-items-center">
                 <div class="col-xl-6 col-md-6">
                     <div class="recepies_thumb">
-                        <img src="{% static 'img/recepie/recepie_details.png' %}" alt="">
+                        {% if recipe %}
+                        <img src="{{ recipe.picture.url }}" alt="">
+                        {% endif %}
                     </div>
                 </div>
                 <div class="col-xl-6 col-md-6" style="margin-top: 20px; margin-bottom: 20px;">
@@ -60,7 +66,7 @@
     </div>
 
 <!-- Снимка -->
-<div class="mt-10 flex items-center space-x-4">
+<div class="mt-10 flex items-center space-x-4" style="font-size: 12px;">
     <label class="font-semibold block mb-2"
         for="id_picture">
         Снимка:
@@ -79,7 +85,7 @@
 </div>
 
 <!-- Прикачен файл -->
-<div class="mt-10 flex items-center space-x-4">
+<div class="mt-10 flex items-center space-x-4" style="font-size: 12px;">
     <label class="font-semibold block mb-2"
         for="id_attachment">
         Прикачен файл:

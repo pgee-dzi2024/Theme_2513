@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13c14061-d379-49e6-b7ae-755d84b25eea" name="Changes" comment="готово на ниво макет">
+    <list default="true" id="13c14061-d379-49e6-b7ae-755d84b25eea" name="Changes" comment="практическа част ОК">
+      <change afterPath="$PROJECT_DIR$/work/recepies_new.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/main/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/main/templates/main/Recipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/templates/main/Recipes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/main/templates/main/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/templates/main/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/templates/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/main/templates/main/recipes_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/templates/main/recipes_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/main/templates/main/recipes_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/templates/main/recipes_new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dp/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dr/~$ма_2513.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/~$rec_1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dr/Дипломен проект.docx" beforeDir="false" afterPath="$PROJECT_DIR$/dr/Дипломен проект.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/work/~$rec_2.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745083185357</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="практическа част ОК">
+      <option name="closed" value="true" />
+      <created>1745088453864</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1745088453864</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +166,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="редакция" />
     <MESSAGE value="готово на ниво макет" />
-    <option name="LAST_COMMIT_MESSAGE" value="готово на ниво макет" />
+    <MESSAGE value="практическа част ОК" />
+    <option name="LAST_COMMIT_MESSAGE" value="практическа част ОК" />
   </component>
 </project>

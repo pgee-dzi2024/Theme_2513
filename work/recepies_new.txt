@@ -1,0 +1,132 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block main_content %}
+
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        {% if recipe %}
+                        <h3>{{ recipe.title }}</h3>
+                        {% else %}
+                        <h3>Нова рецепта</h3>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /bradcam_area  -->
+
+    <div class="recepie_details_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-md-6">
+                    <div class="recepies_thumb">
+                        {% if recipe %}
+                        <img src="{{ recipe.picture.url }}" alt="">
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6" style="margin-top: 20px; margin-bottom: 20px;">
+                    <div >
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <!-- title field -->
+    <div class="mt-10">
+        <label for="{{ form.title.id_for_label }}" class="font-semibold block mb-2">Наименование</label>
+        {{ form.title }}
+        {% if form.title.errors %}<div class="error">{{ form.title.errors }}</div>{% endif %}
+    </div>
+
+    <!-- description field -->
+    <div class="mt-10">
+        <label for="{{ form.description.id_for_label }}" class="font-semibold block mb-2">Описание / Текст</label>
+        {{ form.description }}
+        {% if form.description.errors %}<div class="error">{{ form.description.errors }}</div>{% endif %}
+    </div>
+
+    <!-- category field -->
+    <div class="input-group mt-10">
+        <label for="{{ form.category.id_for_label }}" class="font-semibold block mb-2">Категория</label>
+        <div class="form-select" id="default-select">
+            {{ form.category }}
+        </div>
+        {% if form.category.errors %}<div class="error">{{ form.category.errors }}</div>{% endif %}
+    </div>
+
+    <!-- time field -->
+    <div class="mt-10">
+        <label for="{{ form.time.id_for_label }}" class="font-semibold block mb-2">Време за приготвяне (минути)</label>
+        {{ form.time }}
+        {% if form.time.errors %}<div class="error">{{ form.time.errors }}</div>{% endif %}
+    </div>
+
+<!-- Снимка -->
+<div class="mt-10 flex items-center space-x-4" style="font-size: 12px;">
+    <label class="font-semibold block mb-2"
+        for="id_picture">
+        Снимка:
+        {% if recipe and recipe.picture %}
+            <span class="text-green-700 font-medium">Текуща: {{ recipe.picture.name|cut:"pictures/" }}</span>
+        {% else %}
+            <span class="text-gray-500">Няма избрана снимка</span>
+        {% endif %}
+    </label>
+    <label for="id_picture" class="genric-btn info-border small radius cursor-pointer mb-2">
+        Избери снимка
+    </label>
+    {{ form.picture }}
+    <span id="picture-filename" class="ml-2"></span>
+    {% if form.picture.errors %}<div class="error">{{ form.picture.errors }}</div>{% endif %}
+</div>
+
+<!-- Прикачен файл -->
+<div class="mt-10 flex items-center space-x-4" style="font-size: 12px;">
+    <label class="font-semibold block mb-2"
+        for="id_attachment">
+        Прикачен файл:
+        {% if recipe and recipe.attachment %}
+            <span class="text-green-700 font-medium">Текущ: {{ recipe.attachment.name|cut:"files/" }}</span>
+        {% else %}
+            <span class="text-gray-500">Няма избран файл</span>
+        {% endif %}
+    </label>
+    <label for="id_attachment" class="genric-btn info-border small radius cursor-pointer mb-2">
+        Избери файл
+    </label>
+    {{ form.attachment }}
+    <span id="attachment-filename" class="ml-2"></span>
+    {% if form.attachment.errors %}<div class="error">{{ form.attachment.errors }}</div>{% endif %}
+</div>
+    <div class="mt-10">
+        <button type="submit" class="genric-btn success-border radius">Запази</button>
+    </div>
+</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const pictureInput = document.getElementById('id_picture');
+    const pictureFilename = document.getElementById('picture-filename');
+    if (pictureInput) {
+        pictureInput.addEventListener('change', function() {
+            pictureFilename.textContent = pictureInput.files.length ? pictureInput.files[0].name : '';
+        });
+    }
+    const attachmentInput = document.getElementById('id_attachment');
+    const attachmentFilename = document.getElementById('attachment-filename');
+    if (attachmentInput) {
+        attachmentInput.addEventListener('change', function() {
+            attachmentFilename.textContent = attachmentInput.files.length ? attachmentInput.files[0].name : '';
+        });
+    }
+});
+</script>
+{% endblock %}

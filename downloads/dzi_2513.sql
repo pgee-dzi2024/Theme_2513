@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Време на генериране: 19 апр 2025 в 20:45
+-- Време на генериране: 26 май 2025 в 12:38
 -- Версия на сървъра: 10.4.32-MariaDB
 -- Версия на PHP: 8.2.12
 
@@ -264,7 +264,8 @@ CREATE TABLE `main_recipe` (
 
 INSERT INTO `main_recipe` (`id`, `title`, `description`, `time`, `category`, `picture`, `attachment`) VALUES
 (1, 'Постни печени сарми', 'Хубаво нещо са традициите! Придават идентичност на цял един народ. Затова е изключително важно да ги запазим и да ги предаваме на поколенията след нас.\r\nНа Бъдни вечер, традицията повелява на трапезата да има само постни ястия. Предлагаме рецепта за постни сарми.', 70, 'Основни', 'pictures/pecheni-postni-sarmi-za-Bydni-vecher.jpg', 'files/rec1.pdf'),
-(2, 'БИСКВИТЕНА ТОРТА', 'Бисквитена торта с ябълки, заквасена сметана, шоколад и други вкусотийки. Неустоима, съблазнителна и възхитително вкусна!', 20, 'Десерти', 'pictures/Biskvitena_torta-scaled.jpg', 'files/rec_2.docx');
+(2, 'БИСКВИТЕНА ТОРТА *****', 'Бисквитена торта с ябълки, заквасена сметана, шоколад и други вкусотийки. Неустоима, съблазнителна и възхитително вкусна!', 20, 'Десерти', 'pictures/Biskvitena_torta-scaled.jpg', 'files/rec_2.docx'),
+(3, 'dsdfsa', 'asdfsad asdfasd asdfasdf', 10, 'Предястия', 'pictures/recpie_1.png', 'files/readme.txt');
 
 --
 -- Indexes for dumped tables
@@ -411,7 +412,7 @@ ALTER TABLE `django_migrations`
 -- AUTO_INCREMENT for table `main_recipe`
 --
 ALTER TABLE `main_recipe`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ограничения за дъмпнати таблици
